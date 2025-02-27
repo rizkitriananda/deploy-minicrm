@@ -1,5 +1,37 @@
 {
     "build": {
-        "nodeVersion": "18"
+        "builder": "nixpacks",
+        "config": {
+            "phpVersion": "8.2",
+            "nodeVersion": "18"
+        }
+    },
+    "deploy": {
+        "startCommand": "php artisan serve --host=0.0.0.0 --port=${PORT}"
+    },
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": {
+            "required": true
+        },
+        "DB_CONNECTION": {
+            "required": true
+        },
+        "DB_HOST": {
+            "required": true
+        },
+        "DB_PORT": {
+            "required": true
+        },
+        "DB_DATABASE": {
+            "required": true
+        },
+        "DB_USERNAME": {
+            "required": true
+        },
+        "DB_PASSWORD": {
+            "required": true
+        }
     }
 }
